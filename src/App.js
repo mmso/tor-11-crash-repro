@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, useState } from 'react';
-import openpgpSrc from 'openpgp/dist/openpgp?raw';
-import openpgpWorker from 'openpgp/dist/openpgp.worker?raw';
+import openpgpSrc from '!!raw-loader!openpgp/dist/openpgp';
+import openpgpWorker from '!!raw-loader!openpgp/dist/openpgp.worker';
 import { initScript, initWorker } from './helper';
 
 const transformWorkerContents = (contents) => contents.replace("importScripts('openpgp.js');", '');
